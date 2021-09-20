@@ -1,5 +1,14 @@
+/* 左右摇动 */
 .dl-animation-shake {
-    -webkit-animation: shake-lr 2.5s .15s linear 1;
+    -webkit-animation: shake-lr 2s .15s linear 2;
+}
+/* 上下往复移动 */
+.dl-animation-up-down {
+    -webkit-animation: up-down 2s 0 linear infinite;
+}
+/* 弹出效果 */
+.dl-animation-popup {
+    -webkit-animation: popup 2s .15s linear 1;
 }
 
 /* 左右摇动 */
@@ -22,4 +31,66 @@
     50%,100% {
         transform: rotate(0deg);
     }
+}
+/* 上下往复移动 */
+@-webkit-keyframes up-down {
+    0%,50%,100% {
+        transform: translateY(0%);
+    }
+    10%,40% {
+        transform: translateY(5%);
+    }
+    25% {
+        transform: translateY(10%);
+    }
+    60%,90% {
+        transform: translateY(-5%);
+    }
+    75% {
+        transform: translateY(-10%);
+    }
+}
+/* 转盘抽奖 */
+
+
+/* 弹出效果 */
+@-webkit-keyframes popup {
+    0% {
+        transform: scale(0);
+    } 
+    10% {
+        transform: scale(0.1);
+    }
+    20% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.3);
+    }
+    40% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.7);
+    }
+    80% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* 呼吸效果 */
+@-webkit-keyframes breathe {
+
 }

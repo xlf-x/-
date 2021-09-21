@@ -10,6 +10,10 @@
 .dl-animation-popup {
     -webkit-animation: popup 2s .15s linear 1;
 }
+/* 呼吸效果 */
+.dl-animation-breathe {
+    -webkit-animation: breathe 2s 0 linear infinite;
+}
 
 /* 左右摇动 */
 @-webkit-keyframes shake-lr{ 
@@ -92,5 +96,13 @@
 
 /* 呼吸效果 */
 @-webkit-keyframes breathe {
-
+    0%, 50%, 100% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1);
+    }
+    75% {
+        transform: scale(0.9);
+    }
 }

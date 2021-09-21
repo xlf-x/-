@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画库demo</title>
+    <style>
+        .demo-box {
+            position: absolute;
+            /* top: 45%; */
+            /* left: 50%; */
+            /* transform: translate(-50%, -50%); */
+            top: 30%;
+            left: 40%;
+            width: 100px;
+            height: 200px;
+            background-color: red;
+        }
+        .btn {
+            position: absolute;
+            top: 65%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .btn2 {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-box"></div>
+    <button class="btn" onclick="showAni()">动画展示</button>
+    <button class="btn2" onclick="showAni2()">动画展示2</button>
+</body>
+<!-- <script type="module">
+    import dl_ani from './dl-animation.js'
+    console.log('dl_ani',dl_ani)
+</script> -->
+<script>
+    let dl_ani
+    import('./dl-animation.js').then(module => dl_ani = module.default)
+    let showAni = function() {
+        let box = document.getElementsByClassName('demo-box')[0]
+        box.style = ''
+        setTimeout(() => {
+            box.style = dl_ani.rotate(600, 1, 0, 1)
+        })
+    }
+    let showAni2 = function() {
+        let box = document.getElementsByClassName('demo-box')[0]
+        box.style = ''
+        setTimeout(() => {
+            box.style = dl_ani.rotate(180, 1, 0, 1)
+        })
+    }
+</script>
+</html>
